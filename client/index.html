@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="myApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Mean Screen</title>
+    <!-- jQuery & Stylesheets -->
+  <script src="./static/js/jquery.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+  <!-- pubnub for webrtc video calling -->
+  <script src="https://cdn.pubnub.com/pubnub-3.7.14.min.js"></script>
+  <script src="https://cdn.pubnub.com/webrtc/webrtc.js"></script>
+  <script src="https://cdn.pubnub.com/webrtc/rtc-controller.js"></script>
+  <!-- socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Angular -->
+  <script src='./static/js/angular.js'></script>
+  <script src='./static/js/angular-route.js'></script>
+  <script src='./static/js/angular-cookies.js'></script>
+  <!-- APP & PARTIAL ROUTES-->
+  <script src="./static/js/app.js"></script>
+  <!-- FACTORIES -->
+  <script src="./static/js/factories/user_f.js"></script>
+  <script src="./static/js/factories/friend_f.js"></script>
+  <!-- CONTROLLERS -->
+  <script src="./static/js/controllers/home_c.js"></script>
+  <script src="./static/js/controllers/login_c.js"></script>
+  <script src="./static/js/controllers/signup_c.js"></script>
+  <script src="./static/js/controllers/profile_c.js"></script>
+  <script src="./static/js/controllers/VideoChatController.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>The MEAN Screen</h1>
+    </header>
+    <div ng-view>
+    </div>
+  </div>
+  <!-- Notie.js -->
+  <script type="text/javascript" src="./static/js/notie.js"></script>
+  <script type="text/javascript">
+    var socket = io.connect();
+  </script>
+</body>
+</html>
